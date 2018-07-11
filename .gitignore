@@ -2,7 +2,6 @@
 /.settings
 /.classpath
 /.project
-/target
 
 /gnupg
 .idea
