@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'cheat'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/com.corundumstudio.socketio/netty-socketio
+    compile group: 'com.corundumstudio.socketio', name: 'netty-socketio', version: '1.7.16'
+}
