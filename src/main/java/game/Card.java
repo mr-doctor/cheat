@@ -43,4 +43,14 @@ public class Card {
 
 		return cardObj.getSuit().equals(this.getSuit()) && cardObj.getType().equals(this.getType());
 	}
+
+	@Override
+	public String toString() {
+		String stringBuilder = "Card {" +
+				getSuit() +
+				" of " +
+				getType() +
+				"}";
+		return stringBuilder;
+	}
 }
