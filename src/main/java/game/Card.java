@@ -20,6 +20,14 @@ public class Card {
 		return type;
 	}
 
+	/**
+	 * A custom clone function which creates a new Card using the same suit and type as the origin object.
+	 * @return a new Card, a copy of this Card.
+	 */
+	public Card copy() {
+		return new Card(getSuit(), getType());
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (!obj.getClass().equals(this.getClass())) {
