@@ -40,6 +40,11 @@ public class CardInteractionSteps {
 		numCards++;
 	}
 
+	@And("^the cards to play contains an ([^\"]*) of ([^\"]*)$")
+	public void theCardsToPlayContainsAnTypeOfSuit(String typeString, String suitString) throws Throwable {
+		theCardsToPlayContainsATypeOfSuit(typeString, suitString);
+	}
+
 	@When("^the cards are played$")
 	public void theCardsArePlayed() throws Throwable {
 		getGame().playCards(getCardList());
@@ -48,5 +53,10 @@ public class CardInteractionSteps {
 	@Then("^the pile of cards has (\\d+) cards$")
 	public void thePileOfCardsIncreasesInSize(int expectedSize) throws Throwable {
 		assertEquals(expectedSize, numCards);
+	}
+
+	@Then("^the pile of cards contains those cards$")
+	public void thePileOfCardsContainsThoseCards() throws Throwable {
+		assertTrue(getGame().getPile().containsAll(getCardList()));
 	}
 }
